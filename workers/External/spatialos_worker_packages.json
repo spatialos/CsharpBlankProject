@@ -1,0 +1,28 @@
+{
+  "targets": [
+    {
+      "path": "../../dependencies/worker_sdk/managed",
+      "type": "worker_sdk",
+      "packages": [
+        {
+          "name": "csharp"
+        }
+      ]
+    },
+    {
+      "path": "../../dependencies/worker_sdk/native",
+      "type": "worker_sdk",
+      "packages": [
+        {
+          "name": "core-dynamic-x86_64-win32"
+        },
+        {
+          "name": "core-dynamic-x86_64-macos"
+        },
+        {
+          "name": "core-dynamic-x86_64-linux"
+        }
+      ]
+    }
+  ]
+}

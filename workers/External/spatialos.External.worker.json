@@ -1,0 +1,87 @@
+{
+  "build": {
+    "tasks_filename": "spatialos.csharp_msbuild.build.json"
+  },
+  "bridge": {
+    "worker_attribute_set": {
+      "attributes": [
+        "example_attribute_of_external_worker"
+      ]
+    },
+    "entity_interest": {
+      "range_entity_interest": {
+        "radius": 2
+      }
+    },
+    "component_delivery": {
+      "default": "RELIABLE_ORDERED",
+      "checkout_all_initially": true
+    }
+  },
+  "external": {
+    "cloud": {
+      "run_type": "EXECUTABLE",
+      "windows": {
+        "command": "./bin/x64/ReleaseWindows/External.exe",
+        "arguments": [
+          "locator",
+          "locator.improbable.io",
+          "${IMPROBABLE_PROJECT_NAME}"
+        ]
+      },
+      "linux": {
+        "command": "mono",
+        "arguments": [
+          "./bin/x64/ReleaseMacOS/External.exe",
+          "locator",
+          "locator.improbable.io",
+          "${IMPROBABLE_PROJECT_NAME}"
+        ]
+      },
+      "macos": {
+        "command": "mono",
+        "arguments": [
+          "--arch=64",
+          "./bin/x64/ReleaseMacOS/External.exe",
+          "locator",
+          "locator.improbable.io",
+          "${IMPROBABLE_PROJECT_NAME}"
+        ]
+      }
+    },
+    "local": {
+      "run_type": "EXECUTABLE_ZIP",
+      "windows": {
+        "artifact_name": "External@Windows.zip",
+        "command": "mono",
+        "arguments": [
+          "./External.exe",
+          "receptionist",
+          "localhost",
+          "7777",
+          "ExternalLocalWindows"]
+      },
+      "linux": {
+        "artifact_name": "External@Linux.zip",
+        "command": "mono",
+        "arguments": [
+          "./External.exe",
+          "receptionist",
+          "localhost",
+          "7777",
+          "ExternalLocalLinux"]
+      },
+      "macos": {
+        "artifact_name": "External@Mac.zip",
+        "command": "mono",
+        "arguments": [
+          "--arch=64",
+          "./External.exe",
+          "receptionist",
+          "localhost",
+          "7777",
+          "ExternalLocalMac"]
+      }
+    }
+  }
+}

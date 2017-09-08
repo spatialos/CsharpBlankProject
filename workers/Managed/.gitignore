@@ -1,0 +1,15 @@
+bin
+obj
+package
+.vs
+.spatialos
+*.user
+
+# C# worker auto-generated project files
+spatialos.csharp.build.json
+
+# These are commented out because it's not using auto-generated scripts
+# BuildTargets.targets
+# Managed.sln
+# Managed.targets
+# GeneratedCode.csproj

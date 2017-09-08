@@ -1,0 +1,89 @@
+{
+  "build": {
+    "tasks_filename": "spatialos.csharp_msbuild.build.json"
+  },
+  "bridge": {
+    "worker_attribute_set": {
+      "attributes": [
+        "example_attribute_of_managed_worker"
+      ]
+    },
+    "entity_interest": {
+      "range_entity_interest": {
+        "radius": 2
+      }
+    },
+    "component_delivery": {
+      "default": "RELIABLE_ORDERED",
+      "checkout_all_initially": true
+    }
+  },
+  "managed": {
+    "windows": {
+      "artifact_name": "Managed@Windows.zip",
+      "command": "mono",
+      "arguments": [
+        "./Managed.exe",
+        "receptionist",
+        "${IMPROBABLE_RECEPTIONIST_HOST}",
+        "${IMPROBABLE_RECEPTIONIST_PORT}",
+        "${IMPROBABLE_WORKER_ID}"]
+    },
+    "linux": {
+      "artifact_name": "Managed@Linux.zip",
+      "command": "mono",
+      "arguments": [
+        "./Managed.exe",
+        "receptionist",
+        "${IMPROBABLE_RECEPTIONIST_HOST}",
+        "${IMPROBABLE_RECEPTIONIST_PORT}",
+        "${IMPROBABLE_WORKER_ID}"]
+    },
+    "macos": {
+      "artifact_name": "Managed@Mac.zip",
+      "command": "mono",
+      "arguments": [
+        "./Managed.exe",
+        "receptionist",
+        "${IMPROBABLE_RECEPTIONIST_HOST}",
+        "${IMPROBABLE_RECEPTIONIST_PORT}",
+        "${IMPROBABLE_WORKER_ID}"]
+    }
+  },
+  "external": {
+    "local": {
+      "run_type": "EXECUTABLE_ZIP",
+      "windows": {
+        "artifact_name": "Managed@Windows.zip",
+        "command": "mono",
+        "arguments": [
+          "./Managed.exe",
+          "receptionist",
+          "localhost",
+          "7777",
+          "ManagedLocalWindows"]
+      },
+      "linux": {
+        "artifact_name": "Managed@Linux.zip",
+        "command": "mono",
+        "arguments": [
+          "./Managed.exe",
+          "receptionist",
+          "localhost",
+          "7777",
+          "ManagedLocalLinux"]
+      },
+      "macos": {
+        "artifact_name": "Managed@Mac.zip",
+        "command": "mono",
+        "arguments": [
+          "--arch=64",
+          "./Managed.exe",
+          "receptionist",
+          "localhost",
+          "7777",
+          "ManagedLocalMac"]
+      }
+    }
+  }
+}
