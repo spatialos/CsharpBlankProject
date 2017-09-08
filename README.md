@@ -25,8 +25,7 @@ firstly make sure that all the dependencies of SpatialOS are met by running
 Warnings about missing files from `msbuild` during `spatial worker build` might
 mean you don't have the required C++ build tools in your installation of
 `msbuild` if it came with Visual Studio. You will need to modify your
-installation of Visual Studio to include [C++ build
-tools](http://landinghub.visualstudio.com /visual-cpp-build-tools).
+installation of Visual Studio to include [C++ build tools](http://landinghub.visualstudio.com/visual-cpp-build-tools).
 
 Visual Studio has a weird way to pick default configuration and platform for
 builds. Because of that the default configuration when you open one of the
