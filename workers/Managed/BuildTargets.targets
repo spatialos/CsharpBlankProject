@@ -10,7 +10,7 @@
     <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugMacOS|x64'">
     <OutputPath>bin\x64\DebugMacOS\</OutputPath>
     <PackagePath>package\x64\DebugMacOS\</PackagePath>
-    <WorkerPlatform>darwin</WorkerPlatform>
+    <WorkerPlatform>macos</WorkerPlatform>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLinux|x64'">
     <OutputPath>bin\x64\DebugLinux\</OutputPath>
@@ -25,7 +25,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseMacOS|x64'">
     <OutputPath>bin\x64\ReleaseMacOS\</OutputPath>
     <PackagePath>package\x64\ReleaseMacOS\</PackagePath>
-    <WorkerPlatform>darwin</WorkerPlatform>
+    <WorkerPlatform>macos</WorkerPlatform>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseLinux|x64'">
     <OutputPath>bin\x64\ReleaseLinux\</OutputPath>

@@ -42,9 +42,6 @@
     <Reference Include="Improbable.WorkerSdkCsharp.dll">
       <HintPath>..\..\dependencies\worker_sdk\managed\Improbable.WorkerSdkCsharp.dll</HintPath>
     </Reference>
-    <Reference Include="protobuf-net.dll">
-      <HintPath>..\..\dependencies\worker_sdk\managed\protobuf-net.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <!-- Include generated code with directory structure -->
