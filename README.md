@@ -88,8 +88,7 @@ The C# workers which are in this project are called _External_ and _Managed_
 to reflect the way they are configured and connected and their intended use as
 an external worker which is often used to implement a game client or a managed
 worker used for various tasks ranging from physics simulation to player login
-to inventory management and microservices. Have a look at the [Glossary entry
-for Workers](https://docs.improbable.io/reference/latest/getting-started/concepts/glossary#worker) for a quick intro and links to learning
+to inventory management and microservices. Have a look at the [Glossary entry for Workers](https://docs.improbable.io/reference/latest/getting-started/concepts/glossary#worker) for a quick intro and links to learning
 resources.
 
 If you're building your own worker out of them, you're strongly encouraged to
