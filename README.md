@@ -38,20 +38,11 @@ In case you need further assistance, don't hesitate to ask on the
 to attach the contents of your `logs` folder and output from the failing
 commands.
 
-## Build
-
-Use `spatial worker build` as usual.
-
-The current worker configuration is using a modified version of the generated
-`spatialos.csharp.build.json` which replaces `xbuild` with `msbuild` and adds
-some extra steps. On old versions of Mono (before 5.0.0), even though it's best
-to just update, you might want to replace `msbuild` with `xbuild`.
-
 ## Local launch
 
 Use `spatial local launch` as usual.
 
-Once the deloyment is running you can connect a worker with:
+Once the deployment is running you can connect a worker with:
 
 ```
 spatial local worker launch External local
@@ -104,40 +95,18 @@ the worker name in project files and build targets.
 +-- workers
     |-- External/
     |   |-- External/
-    |   |-- BuildTargets.targets
-    |   |-- External.targets
-    |   |-- External.csproj
-    |   |-- GeneratedCode.csproj
-    |   |-- External.sln
+    |   |-- CsharpWorker.csproj
     |   |-- spatialos.External.worker.json
-    |   |-- spatialos_worker_packages.json
-    |   |-- spatialos.csharp_msbuild.build.json
     |
     |-- Managed/
         |-- Managed/
-        |-- BuildTargets.targets
-        |-- Managed.targets
-        |-- Managed.csproj
-        |-- GeneratedCode.csproj
-        |-- Managed.sln
+        |-- CsharpWorker.csproj
         |-- spatialos.Managed.worker.json
-        |-- spatialos_worker_packages.json
-        |-- spatialos.csharp_msbuild.build.json
 ```
-
-The SpatialOS C# Blank project contains two Visual Studio solutions each with
-several C# projects.
-
-  - `workers/External/External.sln` contains:
-    - `External.csproj` with the worker sources
-    - `GeneratedCode.csproj` with C# classes generated from schema sources
-
-  - `workers/Managed/Managed.sln` follows the same structure as described for
-    `External`.
 
 ### More about the worker project structure
 
-The worker project `External.csproj` has its sources located in
+The External worker project `CsharpWorker.csproj` has its sources located in
 `workers/External/External`, dependencies located in `dependencies/worker_sdk`,
 and build targets for all platforms located in two places:
 
@@ -175,10 +144,7 @@ spatial local worker launch External cloud <deploymentname> <login_token>
 
 ## Cross-platform builds
 
-With the current build configuration for workers (defined in
-`spatialos.csharp_msbuild.build.json`) running `spatial worker build` builds the
-release configurations for each of the 3 supported platforms. You can build for
-a specific platform only by passing the `target` flag:
+You can build for a specific platform only by passing the `target` flag:
 
 ```
 spatial worker build --target=ReleaseWindows
