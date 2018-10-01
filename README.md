@@ -38,6 +38,10 @@ In case you need further assistance, don't hesitate to ask on the
 to attach the contents of your `logs` folder and output from the failing
 commands.
 
+## Build
+
+Use `spatial worker build` as usual.
+
 ## Local launch
 
 Use `spatial local launch` as usual.
