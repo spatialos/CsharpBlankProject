@@ -3,13 +3,13 @@ obj
 package
 .vs
 .spatialos
+improbable
 *.user
 
 # C# worker auto-generated project files
 spatialos.csharp.build.json
-
-# These are commented out because it's not using auto-generated scripts
-# BuildTargets.targets
-# External.sln
-# External.targets
-# GeneratedCode.csproj
+spatialos_worker_packages.json
+BuildTargets.targets
+CsharpWorker.sln
+CsharpWorker.targets
+GeneratedCode.csproj
