@@ -1,6 +1,7 @@
 {
   "build": {
-    "tasks_filename": "spatialos.csharp_msbuild.build.json"
+    "tasks_filename": "spatialos.csharp.build.json",
+    "generated_build_scripts_type": "csharp_msbuild"
   },
   "bridge": {
     "worker_attribute_set": {
