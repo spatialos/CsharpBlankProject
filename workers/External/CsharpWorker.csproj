@@ -9,7 +9,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{5F743C5A-5961-4406-83A9-3D97CB5FE4ED}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AssemblyName>Externl</AssemblyName>
+    <AssemblyName>External</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
