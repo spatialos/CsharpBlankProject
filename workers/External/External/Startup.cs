@@ -59,8 +59,8 @@ namespace External
             using (var connection = useLocator
                 ? ConnectClientWithLocator(args[1], args[2], args[3], args[4], connectionParameters)
                 : ConnectClientWithReceptionist(args[1], Convert.ToUInt16(args[2]), args[3], connectionParameters))
-            using (var dispatcher = new Dispatcher())
             {
+                var dispatcher = new Dispatcher();
                 var isConnected = true;
 
                 dispatcher.OnDisconnect(op =>
@@ -87,7 +87,6 @@ namespace External
                     }
                 }
             }
-
             // This means we forcefully disconnected
             return ErrorExitStatus;
         }
