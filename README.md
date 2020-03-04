@@ -137,7 +137,7 @@ As usual set the `project_name` field in `spatialos.json` to match your SpatialO
 
 ```
 spatial cloud upload <AssemblyName>
-spatial cloud launch <AssemblyName> default_launch.json <deploymentname>
+spatial cloud launch <AssemblyName> default_launch.json --snapshot=snapshots/default.snapshot <deploymentname>
 ```
 
 However, the launcher doesn't support using C# workers to start clients yet. You can still connect a client to the deployment by obtaining a login token from the launcher and passing it when starting the `cloud` worker external configuration.
