@@ -40,11 +40,19 @@ commands.
 
 ## Build
 
-Use `spatial worker build` as usual.
+Build the workers:
+
+```
+spatial worker build
+```
 
 ## Local launch
 
-Use `spatial local launch` as usual.
+Start the deployment with the default launch configuration:
+
+```
+spatial local launch --runtime_version=14.5.4
+```
 
 Once the deployment is running you can connect a worker with:
 
